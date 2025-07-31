@@ -8,7 +8,7 @@ from .config_constants import MOCK_COUNT
 
 fake = Faker()
 
-def gen_mock(func: Callable, postfix=None):
+def gen_mock(func: Callable, postfix: Callable=None):
     res = []
     for _ in range(MOCK_COUNT):
         val = func()
