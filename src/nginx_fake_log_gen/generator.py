@@ -17,7 +17,7 @@ def gen_remote_user(log_mocks: LogDataBuilder):
 
 
 def gen_local_time():
-    return f"{fake.date()}:{fake.time()} +0000"
+    return f"{fake.date(pattern="%d/%b/%Y")}:{fake.time()} +0000"
 
 
 def gen_request(log_mocks: LogDataBuilder):
