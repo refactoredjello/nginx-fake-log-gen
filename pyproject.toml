@@ -1,0 +1,39 @@
+# pyproject.toml
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fake_log_gen"
+version = "0.1.0"
+authors = [
+  { name="Gil Mandler" },
+]
+description = "A utility for generating fake nginx logs"
+readme = "README.md"
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "faker>=37.5.3",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/refactoredjello/nginx-fake-log-gen"
+
+[project.scripts]
+fake-log-gen = "nginx_fake_log_gen.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.black]
+line-length = 88
+target-version = ["py38", "py39", "py310", "py311", "py312", "py313"]
+
+[tool.isort]
+profile = "black"
+line_length = 88
