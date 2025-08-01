@@ -1,10 +1,9 @@
 from collections.abc import Callable
-import random
 import time
 
 from faker import Faker
 
-from .config_constants import MOCK_COUNT
+from .config import MOCK_COUNT
 
 fake = Faker()
 
@@ -27,7 +26,7 @@ class LogDataBuilder:
         
         self.remote_addr = gen_mock(fake.ipv4)
         self.user_name = gen_mock(fake.user_name)
-        self.uri_path = gen_mock(fake.uri_path, lambda: random.choice([fake.uri_extension(), '']))
+        self.uri_path = gen_mock(fake.uri_path, lambda: fake.random_element([fake.uri_extension(), '']))
         self.referer = gen_mock(fake.url)
         self.user_agent = gen_mock(fake.user_agent)
 

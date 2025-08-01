@@ -1,7 +1,7 @@
 import os
 from faker import Faker
 
-from .config_constants import OUT_PATH, OUT_FILE_NAME, LOG_LINES, LOG_FORMAT
+from .config import OUT_PATH, OUT_FILE_NAME, LOG_LINES, LOG_FORMAT
 from .log_data_builder import LogDataBuilder
 
 fake = Faker()

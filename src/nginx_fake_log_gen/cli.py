@@ -3,7 +3,7 @@ import sys
 import os
 
 from .generator import generate_logs, write_logs
-from .config_constants import LOG_LINES, OUT_PATH, OUT_FILE_NAME, MOCK_COUNT
+from .config import LOG_LINES, OUT_PATH, OUT_FILE_NAME, MOCK_COUNT
 
 
 def parse_args(args=None):
